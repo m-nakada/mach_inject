@@ -19,8 +19,9 @@
 // for mmap()
 #include <sys/types.h>
 #include <sys/mman.h>
+#include <unistd.h>
 
-#ifndef	COMPILE_TIME_ASSERT( exp )
+#ifndef	COMPILE_TIME_ASSERT//( exp )
 	#define COMPILE_TIME_ASSERT( exp ) { switch (0) { case 0: case (exp):; } }
 #endif
 #define ASSERT_CAST( CAST_TO, CAST_FROM ) \
